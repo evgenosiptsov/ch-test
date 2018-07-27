@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+// Components
+import App from './components/App';
+
+//Modules' containers
+import AlmostC from './modules/almostc';
+
+
+ReactDOM.render(<App> <AlmostC/> </App>, document.getElementById('root'));
+

@@ -1,0 +1,9 @@
+.almostc_editor textarea {
+  width: 100%;
+}
+.almostc_console {
+  border: 1px solid #808080;
+}
+.almostc_console--error {
+  border: 1px solid #f00;
+}

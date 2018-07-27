@@ -3,16 +3,31 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
+    "classnames": "^2.2.6",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.4",
+    "mobx": "^5.0.3",
+    "mobx-react": "^5.2.3",
+    "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-materialize": "^2.3.3",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "watch-css": "stylus -w ./src/modules/**/styl --out ./src/modules/**/css",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all watch-css build-js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.3"
   }
 }
